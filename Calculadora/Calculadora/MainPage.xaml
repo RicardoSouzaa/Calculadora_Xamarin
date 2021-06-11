@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora.MainPage">
+
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>        
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Linha 0 - caixa de texto onde aparecerá o resultado-->
+        <Label x:Name="resultado" FontSize="48" FontAttributes="Bold" BackgroundColor="Black" Text="0" TextColor="White" 
+               HorizontalTextAlignment="End" VerticalTextAlignment="Center" LineBreakMode="NoWrap" Grid.ColumnSpan="4" Grid.Row="0" >
+        </Label>
+        
+        <!-- Linha 1 - Adicionando botões 7 8 9 / -->
+        <Button Text="7" Grid.Row="1" Grid.Column="0" BackgroundColor="White" TextColor="Black" FontSize="36" BorderWidth="0" Clicked="SelecionandoNum"/>
+        <Button Text="8" Grid.Row="1" Grid.Column="1" BackgroundColor="White" TextColor="Black" FontSize="36" BorderWidth="0" Clicked="SelecionandoNum"/>
+        <Button Text="9" Grid.Row="1" Grid.Column="2" BackgroundColor="White" TextColor="Black" FontSize="36" BorderWidth="0" Clicked="SelecionandoNum"/>
+        <Button Text="/" Grid.Row="1" Grid.Column="3" BackgroundColor="Orange" TextColor="White" FontSize="36" BorderWidth="0" Clicked="SelecaoOperador"/>
+
+        <!-- Linha 2 - Adicionando botões 4 5 6 X -->
+        <Button Text="4" Grid.Row="2" Grid.Column="0" BackgroundColor="White" TextColor="Black" FontSize="36" BorderWidth="0" Clicked="SelecionandoNum"/>
+        <Button Text="5" Grid.Row="2" Grid.Column="1" BackgroundColor="White" TextColor="Black" FontSize="36" BorderWidth="0" Clicked="SelecionandoNum"/>
+        <Button Text="6" Grid.Row="2" Grid.Column="2" BackgroundColor="White" TextColor="Black" FontSize="36" BorderWidth="0" Clicked="SelecionandoNum"/>
+        <Button Text="X" Grid.Row="2" Grid.Column="3" BackgroundColor="Orange" TextColor="White" FontSize="36" BorderWidth="0" Clicked="SelecaoOperador"/>
+
+        <!-- Linha 3 - Adicionando botões 1 2 3 + -->
+        <Button Text="1" Grid.Row="3" Grid.Column="0" BackgroundColor="White" TextColor="Black" FontSize="36" BorderWidth="0" Clicked="SelecionandoNum" />
+        <Button Text="2" Grid.Row="3" Grid.Column="1" BackgroundColor="White" TextColor="Black" FontSize="36" BorderWidth="0" Clicked="SelecionandoNum"/>
+        <Button Text="3" Grid.Row="3" Grid.Column="2" BackgroundColor="White" TextColor="Black" FontSize="36" BorderWidth="0" Clicked="SelecionandoNum"/>
+        <Button Text="-" Grid.Row="3" Grid.Column="3" BackgroundColor="Orange" TextColor="White" FontSize="36" BorderWidth="0" Clicked="SelecaoOperador"/>
+
+        <!-- Linha 4 - Adicionando botões 0 e - -->
+        <Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="White" TextColor="Black" FontSize="36" BorderWidth="0" Clicked="SelecionandoNum"/>
+        <Button Text="+" Grid.Row="4" Grid.Column="3" BackgroundColor="Orange" TextColor="White" FontSize="36" BorderWidth="0" Clicked="SelecaoOperador"/>
+
+        <!-- Linha 5 - Adicionando botões C = -->
+        <Button Text="C" Grid.Row="5" Grid.Column="0" BackgroundColor="Gray" TextColor="White" FontSize="36" BorderWidth="0" Clicked="Limpar"/>
+        <Button Text="=" Grid.Row="5" Grid.Column="1" BackgroundColor="#6E0F03" Grid.ColumnSpan="3" TextColor="White" FontSize="36" BorderWidth="0" Clicked="ResultadoCalculo"/>
+
+
+    </Grid>
+
+</ContentPage>
